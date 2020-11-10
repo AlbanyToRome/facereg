@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#FAFAFA</color>
+    <color name="colorPrimary">#212121</color>
+    <color name="colorPrimaryVariant">#000000</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorSecondary">#2962FF</color>
+    <color name="colorSecondaryVariant">#0039CB</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorError">#F44336</color>
+    <color name="colorOnError">#FFFFFF</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorOnSurface">#212121</color>
+    <color name="colorOnBackground">#212121</color>
+
+    <color name="primaryColor">#003296</color>
+    <color name="primaryLightColor">#003296</color>
+    <color name="primaryDarkColor">#003296</color>
+    <color name="primaryTextColor">#ffffff</color>
+
+    <!-- WORKING COLORS FOR ACTIVITIES -->
+    <color name="NOT_STARTED">#ffcccb</color>
+    <color name="RED">#ffcccb</color>
+    <color name="IN_PROGRESS">#f9a602</color>
+    <color name="DONE">#90ee90</color>
+    <color name="LIGHT_GREY">#d3d399</color>
+    <color name="GREY">#efefef</color>
+    <color name="WHITE">#FFFFFF</color>
+    <color name="DIM_GREY">#F4F5F9</color>
+
+
+    <color name="GREEN">#90EE90</color>
+    <color name="DARK_GREEN">#006400</color>
+    <color name="YELLOW">#FFFF00</color>
+    <color name="AMBER">#ffbf00</color>
+
+    <color name="new_blue">#003296</color>
+    <color name="text_new_grey">#686868</color>
+    <color name="tint_white">#D5D5D5</color>
+    <color name="text_new_blue">#D01C177C</color>
+    <color name="colorWhite"> #fff </color>
+    <color name="text_color_white">#FFFFFF</color>
+    <color name="registered_ha_text_color_fine">#03205B</color>
+    <color name="registered_ha_background_fine">#7765FF</color>
+    <color name="medium_violet">#9370DB</color>
+    <color name="back_ground_gray">#ecf0f1</color>
+    <color name="text_blue">#003296</color>
+    <color name="ghost_white">#F4F5F9</color>
+    <color name="new_white">#FFFFFF</color>
+    <color name="view_black">#000000</color>
+    <color name="view_blue">#050150</color>
+    <color name="absolute_black">#000000</color>
+    <color name="view_white">#FFFFFF</color>
+
+    //External
+    <color name="colorPrimaryDark">#050150</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorRed">#ff0000</color>
+    <color name="colorGreen">#008000</color>
+    <color name="colorBlack">#000000</color>
+
+    <color name="displayBar">#003296</color>
+
+
+    <color name="grey">#707070</color>
+    <color name="mapped_color">#800000D0</color>
+    <color name="registered_color">#8000D000</color>
+    <color name="mapped_session_color">#80D00000</color>
+
+
+    <color name="view_red">#ff0000</color>
+    <color name="container_selected_color">#7361FD</color>
+
+    <color name="container_green_color">#47DEAA</color>
+    <color name="text_color_clear_white">#ffffff</color>
+    <color name="view_blue_new">#003296</color>
+    <color name="view_white_new">#FFFFFF</color>
+    <color name="Grey_Button">#ADADAD</color>
+    <color name="text_grey">#646464</color>
+    <color name="cancel_background">#3C3B40</color>
+</resources>

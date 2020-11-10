@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DIM_GREY">
+
+    <include
+        android:id="@+id/main_toolbarr"
+        layout="@layout/apptoolbar"
+         />
+
+    <RelativeLayout
+        android:id="@+id/relaytive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top20dp"
+        android:layout_below="@id/main_toolbarr"
+        android:layout_above="@id/continueButton"
+        android:layout_marginRight="@dimen/right20dp"
+        android:layout_marginLeft="@dimen/left20dp"
+        android:background="@color/colorWhite"
+        >
+
+        <TextView
+            android:id="@+id/instructionHeadingTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/left10dp"
+            
+            android:text="@string/instructionHeading"
+            android:textColor="@color/absolute_black"
+            android:textSize="25sp" />
+
+        <ScrollView
+            android:id="@+id/instructionsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbarSize="@dimen/scroll10dp"
+            android:scrollbarThumbVertical="@drawable/custom_scroll_style"
+            android:layout_below="@id/instructionHeadingTextView"
+            android:layout_centerHorizontal="true" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/left10dp"
+                    android:textColor="@color/absolute_black"
+                    android:text="@string/instructions"
+                    
+                    android:textSize="20sp"
+                   />
+            </RelativeLayout>
+
+
+
+        </ScrollView>
+
+    </RelativeLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/continueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/include"
+        app:cornerRadius="@dimen/radius20dp"
+        android:layout_marginBottom="@dimen/bottom30dp"
+        android:layout_marginTop="@dimen/top60dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/Continue" />
+    <include
+
+        android:id="@+id/include"
+        layout="@layout/pco_bottom"
+        android:layout_margin="@dimen/left10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        </include>
+
+
+    </RelativeLayout>
+</layout>

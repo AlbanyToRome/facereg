@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width                                        ="match_parent"
+    android:layout_height                                       ="wrap_content"
+    android:orientation                                         ="horizontal">
+
+                             <!--START BUTTON -->
+    <com.google.android.material.button.MaterialButton
+        style                                                   ="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:id                                              ="@+id/startButton"
+        android:layout_width                                    ="wrap_content"
+        android:layout_height                                   ="wrap_content"
+        android:text                                            ="@string/start"
+        android:layout_margin                                   ="2dp"/>
+
+                            <!--SWITCH BUTTON -->
+    <com.google.android.material.button.MaterialButton
+        style                                                   ="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:id                                              ="@+id/cameraButton"
+        android:layout_width                                    ="wrap_content"
+        android:layout_height                                   ="wrap_content"
+        android:text                                            ="@string/switcher"
+        android:layout_margin                                   ="2dp"/>
+
+                            <!--FLASH BUTTON -->
+    <com.google.android.material.button.MaterialButton
+        style                                                   ="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:id                                              ="@+id/flashButton"
+        android:layout_width                                    ="wrap_content"
+        android:layout_height                                   ="wrap_content"
+        android:text                                            ="@string/flash"
+        android:layout_margin                                   ="2dp"/>
+                            <!--COUNTDOWN TIMER -->
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_height                                   ="wrap_content"
+        android:layout_width                                    ="wrap_content"
+        android:id                                              ="@+id/timerText"
+        android:text                                            ="@string/timer"
+        android:textStyle                                       ="bold"
+        android:textSize                                        ="20sp"
+        android:layout_marginStart                              ="10dp"/>
+
+
+
+
+</LinearLayout>

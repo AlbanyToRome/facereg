@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/toolbarMain"
+    android:background="@color/primaryColor"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_gravity="center"
+        android:textColor="@color/text_color_white"
+        android:id="@+id/toolbar_title"
+        android:text="AUDIT"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+    <TextView
+        android:paddingLeft="5dp"
+        android:layout_gravity="center"
+        android:textColor="@color/text_color_white"
+        android:text="version"
+        android:textSize="8dp"
+        android:id="@+id/toolbar_version"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+</androidx.appcompat.widget.Toolbar>
+</layout>

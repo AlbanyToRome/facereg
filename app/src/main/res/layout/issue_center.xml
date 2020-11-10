@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/new_white">
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/colorPrimary">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="center|bottom"
+                android:background="@color/view_white_new">
+
+
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/happyface"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:background="@drawable/roundbutton"
+                android:src="@drawable/happy">
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/sadface"
+                android:visibility="visible"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:background="@drawable/roundbutton"
+                android:src="@drawable/sad_face_icon">
+
+            </ImageView>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/labeled1"
+            android:layout_width="153dp"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/txtContent"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:layout_marginBottom="15dp"
+                android:text="@string/please_contact_support"
+                android:textColor="@color/view_black"
+                android:textSize="15sp"
+                android:visibility="visible">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/labeled1"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cornerRadius="20dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins"
+                android:id="@+id/alert_setting"
+                android:text="@string/call_product"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/text_view_complete"
+                android:textSize="15sp"
+                android:background="@drawable/bg_round_button"
+                android:backgroundTint="@color/WHITE"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/poppins"
+                android:layout_gravity="center"
+                android:textColor="@color/primaryColor"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/issue_center"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:cornerRadius="@dimen/top20dp"
+                app:strokeColor="@color/view_blue"
+                >
+
+            </com.google.android.material.button.MaterialButton>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

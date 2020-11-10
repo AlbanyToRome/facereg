@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/ghost_white"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="last sync date :"
+            android:textSize="10sp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/text_grey"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01/01/20"
+            android:textSize="10sp"
+            android:id="@+id/last_sync_date"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/text_grey"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/staff_id"
+        android:text="T-10000000000000AA"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/text_grey"
+        android:layout_alignParentRight="true"
+        />
+
+</RelativeLayout>

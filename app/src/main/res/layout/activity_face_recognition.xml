@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/absolute_black"
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_member_picture"
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:layout_gravity="center"
+            android:src="@drawable/mask_group" />
+
+        <!--        Scan Failed : No Blink-->
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/linear_layout_noBlink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Scan Failed : No Blink"
+                android:textStyle="bold"
+                android:textColor="@color/text_color_white"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/try_again_relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:onClick="setBgfr_no_blink_cancel"
+                    android:id="@+id/bgfr_no_blink_cancel"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/cl_fr_cancel_look"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/face_scan_cancel"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:onClick="setBgfr_no_blink_retry"
+                    android:id="@+id/bgfr_no_blink_retry"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/cl_fr_blue"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/face_scan_try_again"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="18sp"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+<!--     Is there a face in the picture ?   -->
+        <LinearLayout
+            android:visibility="gone"
+            android:paddingBottom="10dp"
+            android:paddingTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linear_layout_face_in"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/text_color_white"
+                android:text="Is there a face in the picture ?"
+                android:gravity="center"
+                android:textStyle="bold"
+                
+                android:layout_marginBottom="20dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                >
+
+                <TextView
+                    android:id="@+id/bgfr_face_in_no"
+                    android:onClick="setBgfr_face_in_no"
+                    android:layout_width="155dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="NO"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="10dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/cl_fr_cancel_look"
+                    android:textColor="@color/text_color_white"
+                    android:textAllCaps="true"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/bgfr_face_in_yes"
+                    android:onClick="setBgfr_face_in_yes"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_white"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="YES"
+                    android:textAllCaps="true"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/cl_fr_blue"
+                    android:textSize="18sp"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+<!--        Is this the person you want to register ?-->
+        <LinearLayout
+            android:visibility="gone"
+            android:paddingBottom="10dp"
+            android:paddingTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linear_layout_want_to"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_color_white"
+                android:text="Is this the person you want to register ?"
+                
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                >
+
+                <TextView
+                    android:onClick="setBgfr_want_to_no"
+                    android:id="@+id/bgfr_want_to_no"
+                    android:layout_width="155dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="NO"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="10dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/cl_fr_cancel_look"
+                    android:textColor="@color/text_color_white"
+                    android:textAllCaps="true"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/bgfr_want_to_yes"
+                    android:onClick="setBgfr_want_to_yes"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_white"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="YES"
+                    android:textAllCaps="true"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/cl_fr_blue"
+                    android:textSize="18sp"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+<!--        No face in picture Registration is invalid-->
+
+        <LinearLayout
+            android:visibility="visible"
+            android:paddingBottom="10dp"
+            android:paddingTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linear_layout_noFace"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:maxLines="2"
+                android:textSize="20sp"
+                android:textColor="@color/text_color_white"
+                android:text="No face in picture Registration is invalid"
+                
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                />
+
+            <TextView
+                android:layout_gravity="center"
+                android:id="@+id/bgfr_no_face_retry"
+                android:onClick="setBgfr_no_face_retry"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_white"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="RETRY"
+                android:textAllCaps="true"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/cl_fr_blue"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+
+<!--        Wrong person Registration is invalid-->
+
+        <LinearLayout
+            android:visibility="visible"
+            android:paddingBottom="10dp"
+            android:paddingTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linear_layout_wrongface"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:maxLines="2"
+                android:textSize="20sp"
+                android:textColor="@color/text_color_white"
+                android:text="Wrong person Registration is invalid"
+                android:textStyle="bold"
+                
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                />
+
+            <TextView
+                android:layout_gravity="center"
+                android:id="@+id/bgfr_wrong_face_done"
+                android:onClick="setBgfr_wrong_face_done"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_white"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Done"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/cl_fr_blue"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+
+<!--        Scan Successfull-->
+        <LinearLayout
+            android:paddingBottom="10dp"
+            android:paddingTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linear_layout_bgrf_scan_success"
+            android:visibility="gone"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/bgfr_scan_success"
+                android:onClick="setBgfr_scan_success"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/green_tick"/>
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:maxLines="2"
+                android:textSize="22sp"
+                android:textColor="@color/text_color_white"
+                android:text="Scan Successful"
+                android:textStyle="bold"
+                
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                />
+        </LinearLayout>
+
+<!--        Verification Failed : Bad lighting-->
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/linear_layout_Bad_lighting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:lines="2"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Verification Failed : Bad lighting"
+                android:textStyle="bold"
+                android:textColor="@color/text_color_white"
+                android:textSize="20sp"/>
+
+            <LinearLayout
+                android:id="@+id/Bad_lighting_relative_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/bgfr_Bad_lighting_cancel"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/cl_fr_cancel_look"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/face_scan_cancel"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/bgfr_Bad_lighting_retry"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/cl_fr_blue"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/face_scan_try_again"
+                    android:textAllCaps="true"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+<!--        Is this the person in front of you ?-->
+
+        <LinearLayout
+            android:visibility="gone"
+            android:paddingBottom="10dp"
+            android:paddingTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linear_layout_in_front"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/text_color_white"
+                android:text="Is this the person in front of you ?"
+                android:textStyle="bold"
+                
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                >
+
+                <TextView
+                    android:id="@+id/bgfr_in_front_no"
+                    android:layout_width="155dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="NO"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="10dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/cl_fr_cancel_look"
+                    android:textColor="@color/text_color_white"
+                    android:textAllCaps="true"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/bgfr_in_front_yes"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_white"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="YES"
+                    android:textAllCaps="true"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/cl_fr_blue"
+                    android:textSize="18sp"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+<!--       Do you want to recapture ? -->
+
+        <LinearLayout
+            android:visibility="gone"
+            android:paddingBottom="10dp"
+            android:paddingTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linear_layout_recapture"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/text_color_white"
+                android:text="Do you want to recapture ?"
+                android:textStyle="bold"
+                
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                >
+
+                <TextView
+                    android:id="@+id/bgfr_recapture_no"
+                    android:layout_width="155dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="NO"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="10dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/cl_fr_cancel_look"
+                    android:textColor="@color/text_color_white"
+                    android:textAllCaps="true"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/bgfr_recapture_yes"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_white"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:text="YES"
+                    android:textAllCaps="true"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/cl_fr_blue"
+                    android:textSize="18sp"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+<!--        Verification Successfull-->
+        <LinearLayout
+            android:visibility="gone"
+            android:paddingBottom="10dp"
+            android:paddingTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/linear_layout_bgrf_verifi_success"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/green_tick"/>
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:maxLines="2"
+                android:textSize="22sp"
+                android:textColor="@color/text_color_white"
+                android:text="Verification Successful"
+                android:textStyle="bold"
+                
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
+</layout>

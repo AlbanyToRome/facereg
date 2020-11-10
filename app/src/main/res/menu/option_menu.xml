@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/startAudit"
+        android:title="Start Audit" />
+
+    <item
+        android:id="@+id/deleteAudit"
+        android:title="Delete Audit" />
+
+</menu>

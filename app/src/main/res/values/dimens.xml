@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textsize21sp">21sp</dimen>
+    <dimen name="left100dp">100dp</dimen>
+    <dimen name="top460dp">460dp</dimen>
+    <dimen name="width277dp">277dp</dimen>
+    <dimen name="height351dp">351dp</dimen>
+    <dimen name="left5dp">05dp</dimen>
+    <dimen name="top70dp">70dp</dimen>
+    <dimen name="scroll10dp">10dp</dimen>
+    <dimen name="top20dp">20dp</dimen>
+    <dimen name="width120dp">120dp</dimen>
+    <dimen name="radius20dp">20dp</dimen>
+    <dimen name="left56dp">56dp</dimen>
+    <dimen name="top201dp">201dp</dimen>
+    <dimen name="left40dp">40dp</dimen>
+    <dimen name="top310dp">310dp</dimen>
+    <dimen name="top540dp">540dp</dimen>
+    <dimen name="right20dp">20dp</dimen>
+    <dimen name="left20dp">20dp</dimen>
+    <dimen name="left10dp">10dp</dimen>
+    <dimen name="bottom30dp">30dp</dimen>
+    <dimen name="top60dp">60dp</dimen>
+    <dimen name="dp15">15dp</dimen>
+    <dimen name="dp80">80dp</dimen>
+    <dimen name="dp97">97dp</dimen>
+    <dimen name="dp150">150dp</dimen>
+    <dimen name="dp260">260dp</dimen>
+    <dimen name="dp100">100dp</dimen>
+    <dimen name="dp50">50dp</dimen>
+    <dimen name="dp170">170dp</dimen>
+</resources>

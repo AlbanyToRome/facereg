@@ -1,0 +1,68 @@
+apply plugin: 'com.android.library'
+
+
+android {
+    signingConfigs {
+        babbangona {
+            keyAlias 'key0'
+            storeFile file('C:/Users/Babbangona/Desktop/babbangona.jks')
+            storePassword 'QwU3.p^p'
+            keyPassword 'QwU3.p^p'
+        }
+    }
+
+    compileSdkVersion 28
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    defaultConfig {
+        //applicationId "com.babbangona.bgfr"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi-v7a" ,"arm64-v8a", "x86"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.babbangona
+
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    /*android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "BGFR.aar"
+        }
+    }*/
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.1.0-alpha09'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    def room_version = "2.2.0-beta01"
+
+    implementation "androidx.room:room-runtime:2.2.0-beta01"
+    annotationProcessor "androidx.room:room-compiler:2.2.0-beta01"
+    implementation 'com.jakewharton:butterknife:+'
+
+
+}

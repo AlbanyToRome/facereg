@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp260">
+
+
+            <FrameLayout
+                android:id="@+id/frame_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp150"
+                android:background="@color/colorPrimary">
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center|bottom"
+                    android:background="@color/view_white_new">
+
+                </FrameLayout>
+
+
+                <ImageView
+                    android:id="@+id/sad_face"
+                    android:layout_width="@dimen/dp80"
+                    android:layout_height="@dimen/dp80"
+                    android:background="@drawable/bg_round_white"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/dp15"
+                    android:layout_marginBottom="@dimen/top20dp"
+                    android:src="@drawable/face"
+                    android:visibility="visible">
+
+                </ImageView>
+            </FrameLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:id="@+id/labeled"
+                >
+
+                <TextView
+                    android:layout_marginTop="@dimen/left20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:text="@string/please_contact_support"/>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/call_product_support"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/left20dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="Call Product Support"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:visibility="visible"
+                    app:cornerRadius="@dimen/radius20dp"
+                    >
+
+                </com.google.android.material.button.MaterialButton>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/top20dp"
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/labeled"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/left10dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cornerRadius="@dimen/top20dp"
+                    app:strokeColor="@color/view_blue"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:background="@color/new_white"
+                    android:backgroundTint="@color/new_white"
+                    android:textColor="@color/new_blue"
+                    android:fontFamily="@font/poppins"
+                    android:id="@+id/issue_center"
+                    android:text="Issue Center"/>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/popupAlert"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height351dp"
+        android:layout_centerInParent="true">
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp150"
+            >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp100"
+                android:layout_gravity="center|bottom"
+                android:background="@color/DIM_GREY">
+
+
+            </FrameLayout>
+
+
+            <ImageView
+                android:id="@+id/sad_face"
+                android:layout_width="@dimen/dp80"
+                android:layout_height="@dimen/dp80"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/red_round"
+                android:padding="@dimen/top20dp"
+                android:src="@drawable/alert"
+                android:visibility="visible">
+
+            </ImageView>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/labeled"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="40dp"
+            android:background="@color/DIM_GREY">
+
+            <TextView
+                android:id="@+id/txtContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp50"
+                android:layout_marginRight="@dimen/dp50"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:text="@string/Pop_up_dialoge"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                android:visibility="visible">
+
+            </TextView>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginTop="220dp"
+            android:background="@color/DIM_GREY" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/labeled"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/left10dp"
+            android:layout_marginBottom="@dimen/left10dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/alert_cancel"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/top20dp"
+                android:background="@drawable/bg_round_button"
+                android:backgroundTint="@color/WHITE"
+                android:fontFamily="@font/poppins"
+                android:text="@string/cancel"
+                android:textColor="@color/view_blue"
+                app:cornerRadius="@dimen/top20dp"
+                app:strokeColor="@color/view_blue" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/alert_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/Conform"
+                app:cornerRadius="@dimen/top20dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
